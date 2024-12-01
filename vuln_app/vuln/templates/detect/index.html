@@ -1,0 +1,17 @@
+{% from 'bootstrap4/form.html' import render_field %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Detected Open Redirects</h1>
+<p>
+<ul class="list-group">
+    {% for url in urls %}
+    <li class="list-group-item">
+        {{ url[0].decode('utf-8') }}
+    </li>
+    {% endfor %}
+</ul>
+</p>
+
+{% endblock %}

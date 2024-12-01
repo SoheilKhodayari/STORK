@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Vulnerable{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Details</h1>
+    <hr class="my-4">
+    <div id={{ id }}>
+      <p> TIME: <code id="time">{{ time }}</code></p>
+      <p> IFRAME: <code id="iframe">{{ iframe }}</code></p>
+      <p> METHOD: <code id="method">{{ method }}</code></p>
+      <p> URL: <code id="url">{{ url }}</code></p>
+      <p> ARGS: <code id="args">{{ args }}</code></p>
+      <p> FORM: <code id="form">{{ form }}</code></p>
+      <p> JSON: <code id="json">{{ json }}</code></p>
+      <p> COOKIES: <code id="cookies">{{ cookies }}</code></p>
+      <p> HEADERS: <code id="headers">{{ headers }}</code></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<script>
+  if (top.window.location != window.location) {
+    var url = new URL(window.location.toString());
+    url.searchParams.append("{{ id }}", true);
+    top.window.location = url.toString();
+  }
+</script>
+{% endblock %}

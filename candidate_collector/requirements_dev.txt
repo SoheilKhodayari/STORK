@@ -1,0 +1,8 @@
+pytest-datadir
+requests-mock
+autopep8
+pytest
+pytest-cov
+mypy
+black
+pre-commit

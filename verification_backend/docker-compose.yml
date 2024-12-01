@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  or-validator:
+    build : .
+    container_name: verification-backend
+    restart: always
+    networks:
+      - proxy_default
+      - db_network
+    environment:
+      HTTPS_METHOD: noredirect
+      VIRTUAL_HOST: verifier.rpi4.test
+      CERT_NAME: rpi4.test
+    expose:
+      - "3000"
+
+networks:
+  proxy_default:
+    external: true
+  db_network:
+    external: true

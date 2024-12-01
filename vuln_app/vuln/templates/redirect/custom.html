@@ -1,0 +1,57 @@
+{% from 'bootstrap4/form.html' import render_field %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Open Redirect Playground</h1>
+<p>
+This site is vulnerable to multiple kinds of open redirects.
+Used to verify automated detection.
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card">
+                <h5 class="card-header">Backend Redirect</h5>
+                <div class="card-body">
+                    <p class="card-text">Backend sends 3XX HTTP response code along with new Location.</p>
+                    <form action="{{ url_for('redirect.backend') }}" method="get">
+                        {{ render_field(form.url) }}
+                        {{ render_field(form.submit) }}
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm">
+            <div class="mt-3 card">
+                <h5 class="card-header">HTML5 redirect</h5>
+                <div class="card-body">
+                    <p class="card-text">Redirect via HTML5 refresh meta tag. This redirects happens in the frontend.</p>
+                    <form action="{{ url_for('redirect.frontend') }}" method="get">
+                        {{ render_field(form.url) }}
+                        {{ render_field(form.submit) }}
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm">
+            <div class="mt-3 card">
+                <h5 class="card-header">Javascript Redirect</h5>
+                <div class="card-body">
+                    <p class="card-text">Redirect via Javascript window.location.href. This redirect happens in the frontend.</p>
+                    <form action="{{ url_for('redirect.javascript') }}" method="get">
+                        {{ render_field(form.url) }}
+                        {{ render_field(form.submit) }}
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

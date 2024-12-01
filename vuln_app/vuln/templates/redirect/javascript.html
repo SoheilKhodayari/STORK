@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> You are being redirected to: {{ url }} </h1>
+<script>
+    // window.location.href = "{{ url | safe }}";
+     window.location.assign("{{ url | safe }}");
+</script>
+{% endblock %}

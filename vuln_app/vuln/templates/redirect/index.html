@@ -1,0 +1,44 @@
+{% from 'bootstrap4/form.html' import render_field %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<script src="{{ url_for('static', filename='js/complexRedirect.js') }}"></script>
+
+<h1>Open Redirect Playground</h1>
+<p>
+This site is vulnerable to multiple kinds of open redirects.
+Used to verify automated detection.
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="mt-3 card">
+                <h5 class="card-header">Complex Redirect</h5>
+                <div class="card-body">
+                    <p class="card-text">Test basic redirects or chain redirects to evaluate complex redirecs.</p>
+                    <div class="m-3">
+                        <button type="button" onclick="addBackendRedirect()" class="btn btn-outline-primary">Backend</button>
+                        <button type="button" onclick="addHTML5Redirect()" class="btn btn-outline-secondary">HTML5</button>
+                        <button type="button" onclick="addJavascriptRedirect()" class="btn btn-outline-info">Javascript</button>
+                        <button type="button" onclick="clearSelection()" class="btn btn-outline-danger">Clear</button>
+                    </div>
+                    <div class="m-3">
+                        <ul id="selection">
+                        </ul>
+                    </div>
+                    <form id="complexForm" onsubmit='return redirect({{ urls | tojson }})'>
+                        {{ render_field(form.url) }}
+                        {{ render_field(form.submit) }}
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+

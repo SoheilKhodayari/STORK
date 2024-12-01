@@ -1,14 +1,14 @@
--e git+ssh://git@github.com/SoheilKhodayari/OpenRedirect.git@9b6a876f70bc50ae405d8614326f3b9661e5a196#egg=candidate_collector&subdirectory=code/candidate_collector
+-e git+ssh://git@github.com/SoheilKhodayari/STORK.git@9b6a876f70bc50ae405d8614326f3b9661e5a196#egg=candidate_collector&subdirectory=candidate_collector
 certifi==2022.12.7
 charset-normalizer==2.1.1
 click==8.1.3
 docutils==0.19
--e git+ssh://git@github.com/SoheilKhodayari/OpenRedirect.git@9b6a876f70bc50ae405d8614326f3b9661e5a196#egg=endpoint_analyzer&subdirectory=code/endpoint_analyzer
+-e git+ssh://git@github.com/SoheilKhodayari/STORK.git@9b6a876f70bc50ae405d8614326f3b9661e5a196#egg=endpoint_analyzer&subdirectory=endpoint_analyzer
 greenlet==2.0.1
 idna==3.4
 lockfile==0.12.2
 luigi==3.1.1
--e git+ssh://git@github.com/SoheilKhodayari/OpenRedirect.git@9b6a876f70bc50ae405d8614326f3b9661e5a196#egg=or_scanner&subdirectory=code/or_scanner
+-e git+ssh://git@github.com/SoheilKhodayari/STORK.git@9b6a876f70bc50ae405d8614326f3b9661e5a196#egg=or_scanner&subdirectory=or_scanner
 playwright==1.28.0
 pyee==9.0.4
 python-daemon==2.3.2

@@ -1,0 +1,38 @@
+[
+    {
+        "type": "A1",
+        "pattern": "\\?(ACTION|action_url|affiliateRedirectURL|away|back_url|backTo|backURL|base|burl|call_url|callback_url|cburl|callbackLocation|came_from|clickurl|continue|ct0|current_page|data|dest|destino|domain|ext|externalRedirect|externalUrl|fail|forward|FORWARD_URL|gHomePage|go|goto|home|hostname|intentUrl|jump|jump_url|layer|link|linkAddress|linkback|lite_url|location|login|login\\[redirect\\]|login_redirect_url|logout|mgnlReturnTo|net|oadest|old|origin|originUrl|page|pagina|path|post_logout_redirect_uri|previousUrl|promerium_redirect_url|purl|qurl|rd|recurl|redirect|redirect_to|redirect_to|redirect_uri|redirect_url|redirectID|redirectOk|redirectto|redirectUri|redirectUrl|ref|refer|referer|referurl|request|request_uri|RequestedPage|resizewidgeturl|ret_url|RetourUrl|return|return_uri|return_url|returnto|ReturnUrl|reurl|rurl|send|sendTo|service|sp_url|src|st\\.link|submit-url|success|target|target_link_uri|target_url|TargetURL|to|uri|url|urlRedirect|v|view_url|_next|next)=.*"
+    },
+    {
+        "type": "A2",
+        "pattern": "\\?.*=(https%3A%2F%2F|www\\.|[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\\b)"
+    },
+    {
+        "type": "B1",
+        "pattern": "/(action|callbackLocation|cont|forward|goto|link|loc|location|next|redir|redirect|referurl|return|targetUrl|targetAction|view|callbackUri)/(https%3A|[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\\b)"
+    },
+    {
+        "type": "B2",
+        "pattern": "(/.*)?/https%3A/(advance|callback|callbackUri|ext|fetch|go|goto|redir|ref|return|submitUrl|view|redirect)"
+    },
+    {
+        "type": "B3",
+        "pattern": "/.*/(https%3A|[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\\b)"
+    },
+    {
+        "type": "B4",
+        "pattern": "/https%3A/.*?/"
+    },
+    {
+        "type": "C1",
+        "pattern": "#(ajaxUI|action|backTo|backurl|continue|dest|destino|domain|ext|forward|forward_url|gHomePage|go|goto|home|location|next|origin|page|recurl|redirect|redirect_to|redirect_uri|redirect_url|redirectTo|RedirectUrl|referer|return_uri|return_url|returnto|returnUrl|src|to|uri|url)=.*"
+    },
+    {
+        "type": "C2",
+        "pattern": "#.*=(https://|[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\\b)"
+    },
+    {
+        "type": "C3",
+        "pattern": "#(https://|[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\\b)"
+    }
+]

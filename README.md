@@ -1,8 +1,6 @@
 # STORK: Framework for Analysis of Open Redirects
 
-STORK is an open-source static-dynamic framework to detect and analyze client-side open redirect vulnerabilities at scale.  
-
-This repository contains the artifacts for the [NDSS'25 paper](https://soheilkhodayari.github.io/papers/ndss25_open_redirects.pdf): "Do (Not) Follow the White Rabbit: Challenging the Myth of Harmless Open Redirection". 
+STORK is an open-source static-dynamic framework to detect and analyze client-side open redirect vulnerabilities at scale. This repository contains the artifacts for the [NDSS'25 paper](https://soheilkhodayari.github.io/papers/ndss25_open_redirects.pdf): "Do (Not) Follow the White Rabbit: Challenging the Myth of Harmless Open Redirection". 
 
 This project is licensed under `GNU AFFERO GENERAL PUBLIC LICENSE V3.0`. See [here](LICENSE) for more information.
 
